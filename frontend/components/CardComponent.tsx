@@ -7,7 +7,7 @@ export default async function CardComponent() {
   const { blobs: thumbnails } = await list({ mode: 'folded', prefix: '.thumbnail/' });
 
   return (
-    <div className='grid grid-cols-3 gap-8'>  {/* Apply CSS grid layout here */}
+    <div className='grid grid-cols-3 gap-8'>  
       {blobs &&
         blobs.map(({ pathname, url, size, uploadedAt }) => (
           <Link
