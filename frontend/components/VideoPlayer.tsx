@@ -129,20 +129,12 @@ export default function VideoPlayer() {
 
   return (
     <>
-      <header className='flex flex-row justify-between items-center z-10 h-12 w-full bg-cyan-600 px-64'>
-        <Link href='/' className='text-slate-50 text-2xl'>
-          prime video
-        </Link>
-        <div className='flex flex-row space-x-4 text-lg'>
-          <Button as={'a'} href='/upload' variant='light' className='text-slate-200'>
-            Upload <UploadCloudIcon size={24} />
-          </Button>
-        </div>
-      </header>
-      <main className='flex w-full h-svh items-center justify-center bg-black'>
+      
+      <main className='flex w-3/4 h-[100%] items-center justify-center'>
         {url && (
-          <div className='w-11/12 h-[95%]'>
-            <div className='absolute z-10 w-[91.75%] h-[85.5%] rounded-xl border-white-500 shadow-lg shadow-yellow-50 border-3'>
+          <div className='flex flex-col'>
+          <div className='w-full h-[80%]'>
+            <div className='absolute z-10 w-[62%] h-[70.5%] rounded-xl border-white-500 shadow-lg shadow-yellow-50 border-3'>
               <div
                 className={`hover:opacity-100 transition-opacity duration-750 ${isPlaying ? 'opacity-0' : 'opacity-100'} h-full w-full`}
               >
@@ -226,6 +218,10 @@ export default function VideoPlayer() {
             >
               <source src={url} type={`video/${url.split('.').pop()}`} />
             </video>
+          </div>
+          <div className='mt-20'>
+            <p className='text-black'>HEY</p>
+          </div>
           </div>
         )}
       </main>
