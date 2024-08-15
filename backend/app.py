@@ -52,7 +52,7 @@ def handle_send_data(data):
     results = [
         {
             "name": result,
-            "link": product_types.get(result, f"https://www.amazon.in/s?k={result}"),
+            "link": product_types.get(result, f"https://www.walmart.com/search?q={result}"),
         }
         for result in results if result != "person"
     ]
